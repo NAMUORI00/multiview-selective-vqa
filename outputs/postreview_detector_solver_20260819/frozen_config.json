@@ -1,0 +1,57 @@
+{
+  "schema_version": "postreview_detector_solver_config_v1",
+  "selected_on": "validation partition, four-cell macro then all-four then fewer abstentions",
+  "config": {
+    "track_len_min": 2,
+    "det_score_min": 0.4,
+    "t_move": 0.02,
+    "t_grow": 1.0
+  },
+  "train_score": {
+    "cells": {
+      "available-yes": 68.89632107023411,
+      "available-no": 58.19397993311037,
+      "unavailable-yes": 78.59531772575251,
+      "unavailable-no": 78.59531772575251
+    },
+    "macro": 71.07023411371237,
+    "all_four": 38.79598662207358,
+    "events": 299,
+    "confusion": {
+      "abstain->abstain": 470,
+      "abstain->no": 72,
+      "abstain->yes": 56,
+      "no->abstain": 58,
+      "no->no": 174,
+      "no->yes": 67,
+      "yes->abstain": 58,
+      "yes->no": 35,
+      "yes->yes": 206
+    }
+  },
+  "validation_score": {
+    "cells": {
+      "available-yes": 68.29268292682927,
+      "available-no": 58.53658536585366,
+      "unavailable-yes": 75.60975609756098,
+      "unavailable-no": 75.60975609756098
+    },
+    "macro": 69.51219512195122,
+    "all_four": 37.80487804878049,
+    "events": 82,
+    "confusion": {
+      "abstain->abstain": 124,
+      "abstain->no": 23,
+      "abstain->yes": 17,
+      "no->abstain": 15,
+      "no->no": 48,
+      "no->yes": 19,
+      "yes->abstain": 15,
+      "yes->no": 11,
+      "yes->yes": 56
+    }
+  },
+  "grid_size": 200,
+  "shortlist_size": 12,
+  "test_data_read": false
+}

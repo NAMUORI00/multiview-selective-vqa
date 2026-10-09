@@ -1,0 +1,606 @@
+{
+  "arms": {
+    "generation_passes": [
+      {
+        "adapter_model_sha256": "3a4766b545f169db6085fd74efb09cc44c8e70c27329e0d449442c8462d1123e",
+        "best_epoch": 3,
+        "checkpoint_tree_sha256": "acfbf597c90237b7ef3a1538f3b3589b0ab53595fcc828e195ddd5126717a055",
+        "decoding_seed": 20260713,
+        "pass_id": "answer_abstain_seed_20260713",
+        "remote_checkpoint_path": "/workspace/MV-EviRAG/outputs/meva_full_20260713_m3/training/standard_alignment/epoch-3",
+        "seed": 20260713,
+        "source_arm": "standard_alignment",
+        "system_prompt": "explicit evidence-only answer/abstention prompt",
+        "training_reused_not_rerun": true,
+        "selected_release_rule": "dev_max_yield_role_guardrails",
+        "selected_threshold": 0.981128697326919,
+        "policy_status": "primary exact-policy"
+      },
+      {
+        "adapter_model_sha256": "6c2ef5eac6151e05c8006146688d110a1b1cf31d7554c95ef098ab59fafa0bdb",
+        "best_epoch": 3,
+        "checkpoint_tree_sha256": "98e579fa0eaef07909f66c5a5a1c2c6630e94e6561fdb1dcf0bc2bc0d60d89e7",
+        "decoding_seed": 20260713,
+        "pass_id": "answer_only_seed_20260713",
+        "remote_checkpoint_path": "/workspace/MV-EviRAG/outputs/meva_full_20260713_m3/training/answer_only_sft/epoch-3",
+        "seed": 20260713,
+        "source_arm": "answer_only_sft",
+        "system_prompt": "explicit evidence-only answer/abstention prompt",
+        "training_reused_not_rerun": true
+      },
+      {
+        "adapter_model_sha256": "d4e661c0dbca16b6181813fb3ad9161ca490a6d48036e1061bb5c1e1443acee0",
+        "best_epoch": 2,
+        "checkpoint_tree_sha256": "4ee64180e673bbaeea1658934bbcaf39004a29aa8cdaaeb41eac4b122ef875f3",
+        "decoding_seed": 20260713,
+        "pass_id": "answer_abstain_seed_20260714",
+        "remote_checkpoint_path": "/workspace/MV-EviRAG/outputs/meva_seed_sensitivity_20260728/runs/seed_20260714/training/standard_alignment/epoch-2",
+        "seed": 20260714,
+        "source_arm": "standard_alignment",
+        "system_prompt": "explicit evidence-only answer/abstention prompt",
+        "training_reused_not_rerun": true
+      },
+      {
+        "adapter_model_sha256": "31738c607f43c3fbaa83162a0bd8cc24b0a7159c1cd0c39d186a5a9fba8da581",
+        "best_epoch": 3,
+        "checkpoint_tree_sha256": "fa515d4451b3705cee10b8b27b8b9a57b7478b81989923c15320cb692b317dfc",
+        "decoding_seed": 20260713,
+        "pass_id": "answer_only_seed_20260714",
+        "remote_checkpoint_path": "/workspace/MV-EviRAG/outputs/meva_seed_sensitivity_20260728/runs/seed_20260714/training/answer_only_sft/epoch-3",
+        "seed": 20260714,
+        "source_arm": "answer_only_sft",
+        "system_prompt": "explicit evidence-only answer/abstention prompt",
+        "training_reused_not_rerun": true
+      },
+      {
+        "adapter_model_sha256": "f2eddcb4546edfbe4f189db9d63ff63f3af1909f1a22176d02d38ce5e918774b",
+        "best_epoch": 2,
+        "checkpoint_tree_sha256": "edf533be7cd9c439434f4ec527ec8039a0af7a553e0264cc2c2ae1b58fcadab1",
+        "decoding_seed": 20260713,
+        "pass_id": "answer_abstain_seed_20260715",
+        "remote_checkpoint_path": "/workspace/MV-EviRAG/outputs/meva_seed_sensitivity_20260728/runs/seed_20260715/training/standard_alignment/epoch-2",
+        "seed": 20260715,
+        "source_arm": "standard_alignment",
+        "system_prompt": "explicit evidence-only answer/abstention prompt",
+        "training_reused_not_rerun": true
+      },
+      {
+        "adapter_model_sha256": "76e1eb6287e92cd310237fa860c4ab3681eadf122bb70b68bb149252ee3a3d64",
+        "best_epoch": 3,
+        "checkpoint_tree_sha256": "4a271a7b62bb420a941d28c619bba4b3d74a31b5d7361266e102b9e16bb92760",
+        "decoding_seed": 20260713,
+        "pass_id": "answer_only_seed_20260715",
+        "remote_checkpoint_path": "/workspace/MV-EviRAG/outputs/meva_seed_sensitivity_20260728/runs/seed_20260715/training/answer_only_sft/epoch-3",
+        "seed": 20260715,
+        "source_arm": "answer_only_sft",
+        "system_prompt": "explicit evidence-only answer/abstention prompt",
+        "training_reused_not_rerun": true
+      },
+      {
+        "base_model": "Qwen/Qwen3-VL-8B-Instruct",
+        "decoding_seed": 20260713,
+        "pass_id": "explicit_abstention_prompt",
+        "system_prompt": "frozen explicit evidence-only abstention prompt",
+        "training": false,
+        "selected_release_rule": "dev_max_yield_role_guardrails",
+        "selected_threshold": 0.9491225851331859,
+        "policy_status": "primary H1 comparator"
+      },
+      {
+        "base_model": "Qwen/Qwen3-VL-8B-Instruct",
+        "decoding_seed": 20260713,
+        "pass_id": "zero_shot",
+        "system_prompt": "frozen neutral evidence-only prompt",
+        "training": false,
+        "analysis_role": "record-only raw pass; no confirmatory gate"
+      }
+    ],
+    "head_passes": [
+      {
+        "answer_source": "frozen zero-shot generated answer, not a head-generated or fixed affirmative answer",
+        "checkpoint_bytes": 34328,
+        "checkpoint_sha256": "5cebcd829cd11082a1bb68db1baae1d4bd0d87872fc1cd8ed869ff1a89777db7",
+        "materialization_semantics": "release the frozen zero-shot answer only if supported_probability >= 0.5 and zero-shot did not abstain; otherwise emit the fixed abstention string",
+        "pass_id": "correctness_selector",
+        "remote_checkpoint_path": "/workspace/MV-EviRAG/outputs/meva_full_20260713/w5a_fair_baselines/training/correctness_selector/epoch-2.pt",
+        "remote_selection_path": "/workspace/MV-EviRAG/outputs/meva_full_20260713/w5a_fair_baselines/training/correctness_selector/checkpoint_selection.json",
+        "selected_release_rule": "dev_max_yield_role_guardrails",
+        "selected_threshold": 0.9999998807907104,
+        "selection_sha256": "fedf0fbc0c53c8d99ef7e9ed02b1ebd094a8f768c5a2a6def92b1c7f89d9d427",
+        "system_prompt": "predict whether visual evidence supports a correct answer to the question"
+      },
+      {
+        "answer_source": "fixed affirmative ACTIVITY_TEXT template for the queried activity",
+        "checkpoint_bytes": 214936,
+        "checkpoint_sha256": "66cce3b4004d86e0784fe2d05356e92473ae582d7f9cffba7dd5154213e2b11c",
+        "materialization_semantics": "release only when the 13-way prediction equals the queried activity; otherwise abstain",
+        "pass_id": "action_classification_head",
+        "remote_checkpoint_path": "/workspace/MV-EviRAG/outputs/meva_full_20260713/w5a_fair_baselines/training/action_classification_head/epoch-2.pt",
+        "remote_selection_path": "/workspace/MV-EviRAG/outputs/meva_full_20260713/w5a_fair_baselines/training/action_classification_head/checkpoint_selection.json",
+        "selected_release_rule": "dev_max_yield_role_guardrails",
+        "selected_threshold": 0.9994823932647705,
+        "selection_sha256": "135b101ec9c182b5e9f96f0a5cac42047a33e9c0c3fcc49b16cecefa1b3b3128",
+        "system_prompt": "classify the visible target action as a frozen activity label or none"
+      }
+    ],
+    "task_matched_record_only": {
+      "new_cohort_reselection_allowed": false,
+      "policy": "task_matched_selector",
+      "record_only_comparator": "availability allocation",
+      "selection_artifact_path": "outputs/meva_full_20260713/w4_dev_comparator_20260714/features_host_v2/w4_dev_comparator_selection.json",
+      "selection_artifact_sha256": "eb235723964355585e974b5f669a2e5eeb225794f6a2307999db5ee6cb89d042",
+      "status": "record only; no hypothesis test, pass condition, or gate; fit/selection is not repeated on B1"
+    }
+  },
+  "artifacts": {
+    "b1_clip_slot_cohort.py": "b824efe4e20e2fddc1f47b89cc362280420fd86473e6dc09695a9757b427e0ed",
+    "b1_cohort_manifest.json": "1662e91c913511f0b5a3d31cccf56483ed65c589223a6ba8f5ca1e7f18f918eb",
+    "b1_dev_thresholds.py": "95ead7abf2810701f501e6453a438fdf96c92dd44b99e57d7e2d44df0fb2ef57",
+    "b1_oneshot_runner.py": "59d3c77a4598bce02479b9b6e66a758a214931142ce459ac171227da5d52a81a",
+    "b1_reserve.json": "7b9a9a8aec8c4b4264639597760c2949d366d07be02180da6cdb621d3bfa37e8",
+    "b1_thresholds.json": "4a9f9c9eadaa1a98098f6c13563693a8e3b2c90101305ee1cfad1183b1b680e6",
+    "exclusion_clips.txt": "fee0e73393bf846a40b24d5af45dfcb2f2c7dd9fe45de89f59afd929a753dba8"
+  },
+  "claim_contract": {
+    "availability_role": "rules-derived pre-generation allocation signal only; never a canonical release gate",
+    "not_claimed": [
+      "human semantic sufficiency or answerability labels",
+      "new-camera or new-site transfer",
+      "formal risk or coverage guarantee",
+      "general operational or deployment safety",
+      "online latency, throughput, concurrency cost, or deployed yield",
+      "unique causal effect, universal transfer, or model-family superiority",
+      "multi-view fusion, complementarity, or multi-positive combination benefit"
+    ],
+    "primary_scope": "On 260 result-unobserved MEVA incidents whose source clips and site-by-synchronized-5-minute slots are disjoint from prior consumption, first test the 20260713 exact-policy answer/abstain release policy against the frozen explicit-abstention-prompt policy (H1), then, only if H1 passes, test it against the frozen correctness-selector head (H2). Availability allocation and GPU cost are record-only diagnostics.",
+    "prohibited_wording": [
+      "semantically sufficient evidence",
+      "human-answerable",
+      "new cameras/sites",
+      "availability release gate",
+      "certified safe or risk guaranteed",
+      "deployment-ready or real-time",
+      "best-seed result",
+      "fusion gain or complementarity gain"
+    ],
+    "same_camera_and_same_site_reuse": "allowed and disclosed; camera or place novelty is not claimed"
+  },
+  "cohort": {
+    "candidate_views": 1096,
+    "content_identity": {
+      "execution": "hash only manifest-consumed downloaded sources and record downloaded SHA-256 before frames",
+      "metadata_freeze": "clip ID + remote key + expected bytes + ETag"
+    },
+    "determinism": {
+      "independent_full_script_output_sha_verified": true,
+      "run_1_event_sequence_sha256": "25fd51989280f0a83d55b708780dd53662d6f378d0dedf71aa5e098d7693918d",
+      "run_2_event_sequence_sha256": "25fd51989280f0a83d55b708780dd53662d6f378d0dedf71aa5e098d7693918d",
+      "same_seed_milp_solved_twice": true
+    },
+    "eligible_pool_candidate_views": 3354,
+    "eligible_pool_events": 714,
+    "events": 260,
+    "exclusion_clip_count": 641,
+    "exclusion_clip_sha256": "fee0e73393bf846a40b24d5af45dfcb2f2c7dd9fe45de89f59afd929a753dba8",
+    "manifest_sha256": "1662e91c913511f0b5a3d31cccf56483ed65c589223a6ba8f5ca1e7f18f918eb",
+    "reserve_count": 454,
+    "reserve_rule": "Remove the failed active event, then scan this static list from rank 261. Choose the first unused candidate for which cohort_constraints_hold is true on the current active 260-event cohort. Do not skip a feasible earlier rank.",
+    "reserve_sha256": "7b9a9a8aec8c4b4264639597760c2949d366d07be02180da6cdb621d3bfa37e8",
+    "reserve_unresolved_failure": "record failure and treat it as non-release; do not alter constraints",
+    "selection_constraints": {
+      "all_12_activities_min_events_each": 8,
+      "events": 260,
+      "location_date_blocks_min": 3,
+      "max_activity_events": 70,
+      "max_activity_share_display_percent": 26.92,
+      "max_activity_share_exact": 0.2692307692307692,
+      "max_camera_events": 104,
+      "max_camera_share": 0.4,
+      "n_cand_ge_3_min": 200,
+      "n_cand_ge_4_min": 70,
+      "two_role_cameras_min": 6
+    },
+    "set_constraints": [
+      "B1_clip_ids intersect prior_clip_ids = empty set",
+      "B1_site_slot_keys intersect prior_site_slot_keys = empty set"
+    ],
+    "site_slot_definition": "site|YYYY-MM-DD.HH-(floor(MM/5)*5)-00 from source clip start; camera excluded"
+  },
+  "decision_rules": {
+    "confirmatory_layer": "the 20260713 answer_abstain exact policy only; the three-seed layer is not an additional confirmatory gate",
+    "iut_three_conditions": {
+      "H1": {
+        "comparison": "answer_abstain_seed_20260713 exact policy minus explicit_abstention_prompt",
+        "conditions": [
+          "two-sided 95% paired event-bootstrap CI lower bound for Delta correct-released yield at the selected positive timepoint > 0",
+          "one-sided 95% paired event-bootstrap upper bound for Delta wrong-release risk at the selected positive timepoint <= +0.05",
+          "one-sided 95% paired event-bootstrap upper bound for Delta event-level any-negative-violation risk <= +0.05"
+        ]
+      },
+      "H2": {
+        "comparison": "answer_abstain_seed_20260713 exact policy minus correctness_selector",
+        "conditions": [
+          "two-sided 95% paired event-bootstrap CI lower bound for Delta correct-released yield at the selected positive timepoint > 0",
+          "one-sided 95% paired event-bootstrap upper bound for Delta wrong-release risk at the selected positive timepoint <= +0.05",
+          "one-sided 95% paired event-bootstrap upper bound for Delta event-level any-negative-violation risk <= +0.05"
+        ]
+      },
+      "intersection_union": "all three conditions must pass; a failure of any condition fails that hypothesis"
+    },
+    "metric_definitions": {
+      "correct_released_yield": "event binary outcome at the policy-selected positive timepoint: released and correct",
+      "wrong_release_risk": "event binary outcome at the policy-selected positive timepoint: released and incorrect",
+      "any_negative_violation_risk": "event binary outcome: any registered negative role is released",
+      "difference_orientation": "answer_abstain_seed_20260713 minus the named comparator"
+    },
+    "ordered_gatekeeping": "Evaluate H1 first. Evaluate H2 confirmatorily only if H1 passes all three registered IUT conditions.",
+    "record_only": {
+      "availability_vs_task_matched": "report allocation outcomes only; no hypothesis test, condition, or gate",
+      "gpu_cost": "report preprocessing-inclusive measured GPU cost only; no hypothesis test, condition, or gate"
+    },
+    "seed_robustness": {
+      "analysis": "average each event's outcome across the three seeds, then apply the registered event bootstrap",
+      "answer_only": "registered secondary robustness diagnostic; threshold fallback does not rescue or redefine H1/H2",
+      "best_seed_selection_or_reporting": "prohibited",
+      "confirmatory_gate": false,
+      "per_seed_reporting": "publish every seed-specific result",
+      "safety_bound": "also report the worst (largest) seed-specific one-sided upper bound for each safety risk difference"
+    },
+    "two_layer_analysis": {
+      "layer_1": "full 260-event cohort; only confirmatory layer",
+      "layer_2": "prespecified metadata-proxy-hard sensitivity; descriptive and cannot rescue H1 or H2",
+      "proxy_hard_union": "minimum positive height <=64 px OR minimum negative FOV clearance <=10 degrees",
+      "proxy_reason_argmax": {
+        "assignment": "argmax(height_severity, fov_severity); exact ties choose height",
+        "fov_severity": "clip((10 - minimum_negative_clearance_deg)/10, 0, 1)",
+        "height_severity": "clip((64 - minimum_positive_height_px)/64, 0, 1)",
+        "outcome_use": false
+      }
+    }
+  },
+  "designation": {
+    "korean_name": "B1 원천 클립 및 장소-5분 슬롯 비중복 2차 봉인 확증",
+    "lifecycle": "protocol freeze before B1 media materialization or outcome observation",
+    "result_observation_state": "NOT_OPENED",
+    "short_name": "B1 clip-and-site-slot-disjoint second sealed confirmation"
+  },
+  "deviation_and_disclosure": {
+    "deviation_log_required": true,
+    "never_publish": [
+      "provider credentials",
+      "private dataset access configuration",
+      "raw source AVI"
+    ],
+    "public_release_pledge": [
+      "registration JSON and human summary",
+      "exclusion list, metadata manifest, reserve order, and threshold artifact",
+      "T1/T2/T3 scripts and config/raw seal manifests",
+      "all aggregate code and claim tables after opening"
+    ],
+    "reserve_use": "publish failed event, chosen reserve rank, constraint check, and all hashes",
+    "results_informed_rerun": "exploratory only and cannot replace B1"
+  },
+  "execution": {
+    "aggregation_in_runner": false,
+    "gpu_waves": [
+      {
+        "gpu0": "answer_abstain_seed_20260713",
+        "gpu1": "answer_abstain_seed_20260714",
+        "gpu2": "answer_abstain_seed_20260715",
+        "wave": 1
+      },
+      {
+        "gpu0": "answer_only_seed_20260713",
+        "gpu1": "answer_only_seed_20260714",
+        "gpu2": "answer_only_seed_20260715",
+        "wave": 2
+      },
+      {
+        "gpu0": "explicit_abstention_prompt",
+        "gpu1": "zero_shot",
+        "gpu2": "idle",
+        "wave": 3
+      },
+      {
+        "gpu0": "correctness_selector",
+        "gpu1": "action_classification_head",
+        "gpu2": "idle",
+        "wave": 4
+      }
+    ],
+    "retry": {
+      "allowed": "same command/config/prompt/seed/checkpoint and ordered checkpoint resume only",
+      "exhausted": "record unresolved failure and force non-release",
+      "maximum_attempts": 3,
+      "prohibited": "prompt, threshold, model, seed, arm, row order, or cohort change"
+    },
+    "runner": {
+      "path": "scripts/operator/b1_oneshot_runner.py",
+      "sha256": "59d3c77a4598bce02479b9b6e66a758a214931142ce459ac171227da5d52a81a",
+      "w4_reused_runner_path": "scripts/w4_oneshot_runner.py",
+      "w4_reused_runner_sha256": "0f41f00431c0cb8f7e424ddf89e9414680de0e815a4be5ea84776160cc64b9ce"
+    },
+    "stages": [
+      "preflight",
+      "config seal",
+      "manifest-only materialization",
+      "availability features and scores",
+      "eight generation passes",
+      "two head passes",
+      "raw seal",
+      "separate explicit post-open aggregation"
+    ],
+    "stop_rules": [
+      "stop on hash, count, schema, prompt, checkpoint, commit, disk, or GPU-shard mismatch",
+      "stop rather than substitute another model, arm, threshold, source clip, or parser",
+      "do not aggregate before the raw seal is complete"
+    ],
+    "two_stage_seal": {
+      "config_seal": "hash registration, cohort, exclusion, reserve, thresholds, code, prompts, checkpoints, and execution plan before media access",
+      "opened_definition": "B1 becomes opened only when an explicitly approved separate aggregate process reads the completed raw-seal manifest to compute outcome summaries.",
+      "raw_seal": "hash materialization ledger, availability outputs, eight generation JSONLs, and two head JSONLs before aggregation"
+    }
+  },
+  "freeze_date_kst": "2026-08-05",
+  "power": {
+    "alpha": 0.05,
+    "bootstrap_replicates_per_trial": 4000,
+    "boundary": "B0 n01=0 is used only to parameterize the stated attenuation simulation; it is not adopted as a B1 decision criterion or future-cell assumption.",
+    "results_path": "outputs/b1_prereg_pins_20260805/power_sim_results.json",
+    "results_sha256": "a0524c115a88a042149551000907eae1f43b0ae46f723c9a045af4cab8b978e3",
+    "sample_size": 260,
+    "scenarios": [
+      {
+        "exact_mcnemar_power": 1.0,
+        "paired_bootstrap_power": 1.0,
+        "target_delta_probability_points": 0.3
+      },
+      {
+        "exact_mcnemar_power": 0.9911,
+        "paired_bootstrap_power": 0.9931,
+        "target_delta_probability_points": 0.15
+      },
+      {
+        "exact_mcnemar_power": 0.7999,
+        "paired_bootstrap_power": 0.8196,
+        "target_delta_probability_points": 0.1
+      }
+    ],
+    "script_path": "outputs/b1_prereg_pins_20260805/power_sim.py",
+    "script_sha256": "a847a2dc7b57e055391b2631abdaed9e39df70ea60d700554f30d594d3b431ed",
+    "trials": 10000
+  },
+  "pre_execution_checklist": {
+    "disk_safety_floor_80_gib": {
+      "status": "NOT_RUN"
+    },
+    "execution_user_approval": {
+      "status": "NOT_GRANTED"
+    },
+    "gpu_shards_idle_and_owned": {
+      "status": "NOT_RUN"
+    },
+    "local_execution_commit_created": {
+      "status": "NOT_RUN"
+    },
+    "local_origin_commit_match": {
+      "current_head": "488a9bf8b4c3e813d05cde76ece16384dab6e486",
+      "current_origin_main": "d79f62998cb217a006a3550091d35efbcc60da4f",
+      "status": "NOT_RUN_FAILS_CURRENTLY"
+    },
+    "pushed_to_origin_main": {
+      "status": "NOT_RUN"
+    },
+    "remote_checkpoint_hashes_reverified": {
+      "basis_so_far": "2026-08-05 pin inspection only",
+      "status": "NOT_RUN"
+    },
+    "server_checkout_clean_and_same_commit": {
+      "status": "NOT_RUN"
+    },
+    "server_existing_dirty_files_resolved_by_owner": {
+      "status": "NOT_RUN"
+    },
+    "worktree_clean": {
+      "observed_status_lines": [
+        " M docs/manuscript/manuscript_ieee_ko.tex"
+      ],
+      "status": "NOT_RUN_FAILS_CURRENTLY"
+    }
+  },
+  "reference_file_sha256": {
+    "outputs/b1_prereg_20260805/b1_cohort_manifest.json": "1662e91c913511f0b5a3d31cccf56483ed65c589223a6ba8f5ca1e7f18f918eb",
+    "outputs/b1_prereg_20260805/b1_reserve.json": "7b9a9a8aec8c4b4264639597760c2949d366d07be02180da6cdb621d3bfa37e8",
+    "outputs/b1_prereg_20260805/b1_thresholds.json": "4a9f9c9eadaa1a98098f6c13563693a8e3b2c90101305ee1cfad1183b1b680e6",
+    "outputs/b1_prereg_20260805/exclusion_clips.txt": "fee0e73393bf846a40b24d5af45dfcb2f2c7dd9fe45de89f59afd929a753dba8",
+    "outputs/b1_prereg_pins_20260805/b1_pins_report.md": "0cb15c684cf995611731b0fc5ce1af787b24be38c44473302298cbccf85422d9",
+    "outputs/b1_prereg_pins_20260805/pins.json": "5a096fa93b738227a6d7300632373d72a3897e03eb60d2b23add45da4201da38",
+    "outputs/b1_prereg_pins_20260805/power_sim.py": "a847a2dc7b57e055391b2631abdaed9e39df70ea60d700554f30d594d3b431ed",
+    "outputs/b1_prereg_pins_20260805/power_sim_results.json": "a0524c115a88a042149551000907eae1f43b0ae46f723c9a045af4cab8b978e3",
+    "outputs/clip_disjoint_feasibility_20260804/feasibility_report.md": "8385c7128c5d35737af5c5066313a695971a6d33e4fa83e46fad298574172482",
+    "outputs/meva_full_20260713/w4_dev_comparator_20260714/features_host_v2/w4_dev_comparator_selection.json": "eb235723964355585e974b5f669a2e5eeb225794f6a2307999db5ee6cb89d042",
+    "outputs/meva_full_20260713/w4_oneshot_20260714/answers/answer_abstain_sft.plan.json": "6781b1461afcf94b749e0bacf631920c4a54cea534aad1a22c10589b82013bc8",
+    "outputs/meva_full_20260713/w4_oneshot_20260714/answers/explicit_abstention_prompt.plan.json": "06c3b1da26c57d622396a538b365c64d1d07b252f20ecad7042f8fab95ae11e9",
+    "outputs/meva_full_20260713/w5a_fair_baselines/responses/answer_abstain_sft.jsonl": "05c733fe827776b753f7fb2a4a4b371e26fbf7c07d0d7e2512c3f2d519a8bf2c",
+    "outputs/meva_full_20260713/w5a_fair_baselines/w5a_dev_selection.json": "afd607ecc221fa00fe28b7610039bed9a19ca46a89c69031c6405c5e444dfc1f",
+    "outputs/meva_full_20260713/w5a_fair_baselines/w5a_spec_freeze.json": "215e89b2f80cafc2e9b137bbd7fbb08bba187c9daf4db031cbe9caf85efd1e65",
+    "outputs/meva_full_20260713_m3/evaluation/answer_only_sft.jsonl": "153ac9a9c3d85f6b859626bba3ae03502f48553d95edf09cda2f5094c2d2463b",
+    "outputs/meva_full_20260713_m3/evaluation/standard_alignment.jsonl": "cb1deaca7401de3754c26e34e0444197bc571e9523ad6330de2b5992080521db",
+    "outputs/meva_full_20260713_m3/judge/siglip2_dinov2_logreg.joblib": "28983a6b3ec68bac141567658aa4cff9888cb4a8d208c56be29797b21da119e4",
+    "outputs/meva_full_20260713_m3/m3_execution_freeze_v4.json": "cc33423d1c94f5e66ce5018bc742c99c2149c0ec3ca1bd8118ded7d9d2ec3951",
+    "outputs/meva_full_20260713_m3/repro/m3_meva_alignment_v4.py": "e51cf0ede55e310882a695f18d6917c8ee6f708f035b49063017fa9f3d721c10",
+    "outputs/meva_full_20260713_m3/training/answer_only_sft/checkpoint_selection.json": "797bf0529c26923f3b1386108f3673d6679239ae43686a3d40a4e89528bbfbd1",
+    "outputs/meva_full_20260713_m3/training/standard_alignment/checkpoint_selection.json": "455031a1e00c47aa513bcc4f5e1d934e9e05f7f9fff939c0770973a1bf504dde",
+    "outputs/meva_seed_sensitivity_20260728/runs/seed_20260714/evaluation/answer_only_sft.jsonl": "a841480002821c3251221c46062e4cb75909bb8608ecc330b19108d753fc2c77",
+    "outputs/meva_seed_sensitivity_20260728/runs/seed_20260714/evaluation/standard_alignment.jsonl": "8ef67a4a3c533d879126c1568bd9f580b6bdca6738af0519dc2f805008d2557f",
+    "outputs/meva_seed_sensitivity_20260728/runs/seed_20260714/training/answer_only_sft/checkpoint_selection.json": "2826a8f70f449f2226a1025338b5009ab5f4282fb6cf9d4d1dc57ed412696b05",
+    "outputs/meva_seed_sensitivity_20260728/runs/seed_20260714/training/standard_alignment/checkpoint_selection.json": "ddc4ade9a60a9bc74ec3d665628a85fa1dd891d3330ee64d8ffcf3ba0040e972",
+    "outputs/meva_seed_sensitivity_20260728/runs/seed_20260715/evaluation/answer_only_sft.jsonl": "b360bbd3a7745d25304f6cb8e75e1f6553785378cb2102ed23446901da1ec09a",
+    "outputs/meva_seed_sensitivity_20260728/runs/seed_20260715/evaluation/standard_alignment.jsonl": "aca822ab731bfb5e590c068b823884a04c60b438f818259dc0eb4ad19a2296e7",
+    "outputs/meva_seed_sensitivity_20260728/runs/seed_20260715/training/answer_only_sft/checkpoint_selection.json": "6b66e1ac8ab94f4f3c333eae449222f1b32bd06325be26820b09d1d5d064d117",
+    "outputs/meva_seed_sensitivity_20260728/runs/seed_20260715/training/standard_alignment/checkpoint_selection.json": "50873d1b61591950ff1e8cd0ce6114c418979b9b3701dd110ce0724d271137fa",
+    "scripts/operator/answerer_alignment_lora.py": "bdab7e210efd3a6873346d5a5d87a9b09f0eb38d66b7e2fe742d139e632f7046",
+    "scripts/operator/b1_clip_slot_cohort.py": "b824efe4e20e2fddc1f47b89cc362280420fd86473e6dc09695a9757b427e0ed",
+    "scripts/operator/b1_dev_thresholds.py": "95ead7abf2810701f501e6453a438fdf96c92dd44b99e57d7e2d44df0fb2ef57",
+    "scripts/operator/b1_oneshot_runner.py": "59d3c77a4598bce02479b9b6e66a758a214931142ce459ac171227da5d52a81a",
+    "scripts/operator/w3w5a_common.py": "816839a9df60cd39606c9606d70222fab7fe0c2e0a23c05b2dd52efd5052e8b8",
+    "scripts/operator/w5a_fair_baselines_runner.py": "cef9c065dee2f7f36369ae4458af4f817b15652fb32fcdaf4e030971132c8279",
+    "scripts/w4_dev_comparator_runner.py": "a6ff126d4a7cc5b87f537f0d2056c40cc1ed46f391068392380dbf7b711ce40c",
+    "scripts/w4_metadata_gate.py": "8c88b7234dbb6cccd3bc8227ea4112f9fb812aa247d2fb5161faf8fc27a1b1fa",
+    "scripts/w4_oneshot_runner.py": "0f41f00431c0cb8f7e424ddf89e9414680de0e815a4be5ea84776160cc64b9ce"
+  },
+  "remote_checkpoint_references": {
+    "adapters": [
+      {
+        "adapter_model_sha256": "3a4766b545f169db6085fd74efb09cc44c8e70c27329e0d449442c8462d1123e",
+        "path": "/workspace/MV-EviRAG/outputs/meva_full_20260713_m3/training/standard_alignment/epoch-3",
+        "tree_sha256": "acfbf597c90237b7ef3a1538f3b3589b0ab53595fcc828e195ddd5126717a055"
+      },
+      {
+        "adapter_model_sha256": "6c2ef5eac6151e05c8006146688d110a1b1cf31d7554c95ef098ab59fafa0bdb",
+        "path": "/workspace/MV-EviRAG/outputs/meva_full_20260713_m3/training/answer_only_sft/epoch-3",
+        "tree_sha256": "98e579fa0eaef07909f66c5a5a1c2c6630e94e6561fdb1dcf0bc2bc0d60d89e7"
+      },
+      {
+        "adapter_model_sha256": "d4e661c0dbca16b6181813fb3ad9161ca490a6d48036e1061bb5c1e1443acee0",
+        "path": "/workspace/MV-EviRAG/outputs/meva_seed_sensitivity_20260728/runs/seed_20260714/training/standard_alignment/epoch-2",
+        "tree_sha256": "4ee64180e673bbaeea1658934bbcaf39004a29aa8cdaaeb41eac4b122ef875f3"
+      },
+      {
+        "adapter_model_sha256": "31738c607f43c3fbaa83162a0bd8cc24b0a7159c1cd0c39d186a5a9fba8da581",
+        "path": "/workspace/MV-EviRAG/outputs/meva_seed_sensitivity_20260728/runs/seed_20260714/training/answer_only_sft/epoch-3",
+        "tree_sha256": "fa515d4451b3705cee10b8b27b8b9a57b7478b81989923c15320cb692b317dfc"
+      },
+      {
+        "adapter_model_sha256": "f2eddcb4546edfbe4f189db9d63ff63f3af1909f1a22176d02d38ce5e918774b",
+        "path": "/workspace/MV-EviRAG/outputs/meva_seed_sensitivity_20260728/runs/seed_20260715/training/standard_alignment/epoch-2",
+        "tree_sha256": "edf533be7cd9c439434f4ec527ec8039a0af7a553e0264cc2c2ae1b58fcadab1"
+      },
+      {
+        "adapter_model_sha256": "76e1eb6287e92cd310237fa860c4ab3681eadf122bb70b68bb149252ee3a3d64",
+        "path": "/workspace/MV-EviRAG/outputs/meva_seed_sensitivity_20260728/runs/seed_20260715/training/answer_only_sft/epoch-3",
+        "tree_sha256": "4a271a7b62bb420a941d28c619bba4b3d74a31b5d7361266e102b9e16bb92760"
+      }
+    ],
+    "heads": [
+      {
+        "path": "/workspace/MV-EviRAG/outputs/meva_full_20260713/w5a_fair_baselines/training/correctness_selector/epoch-2.pt",
+        "sha256": "5cebcd829cd11082a1bb68db1baae1d4bd0d87872fc1cd8ed869ff1a89777db7"
+      },
+      {
+        "path": "/workspace/MV-EviRAG/outputs/meva_full_20260713/w5a_fair_baselines/training/action_classification_head/epoch-2.pt",
+        "sha256": "66cce3b4004d86e0784fe2d05356e92473ae582d7f9cffba7dd5154213e2b11c"
+      }
+    ]
+  },
+  "resource_plan": {
+    "adapter_training_gpu_hours": 0.0,
+    "adapter_training_reason": "six frozen adapters are reused with pinned tree and model hashes",
+    "availability_generation_selector_gpu_hours": [
+      0.74,
+      0.89
+    ],
+    "not_a_deployment_claim": true,
+    "recommended_incremental_disk_gib": [
+      5,
+      7
+    ],
+    "three_gpu_planning_wall_hours": "approximately 5; linear planning estimate only",
+    "total_execution_gpu_hours": [
+      8.96,
+      9.11
+    ],
+    "two_separate_head_gpu_hours": 8.22031190943702
+  },
+  "schema_version": "meva_b1_preregistration_v1.1",
+  "scorer_parser": {
+    "b1_strict_parseability_wrapper": "The raw response must parse to one JSON object with decision in {answer, abstain} and a string answer. Otherwise unparsable=true and the row is forced to non-release.",
+    "frozen_parser_source": "scripts/operator/answerer_alignment_lora.py#parse_answer/positive_correct",
+    "frozen_parser_source_sha256": "bdab7e210efd3a6873346d5a5d87a9b09f0eb38d66b7e2fe742d139e632f7046",
+    "rules": [
+      "extract the first JSON-object span and parse decision and answer",
+      "decision=abstain or the frozen abstention phrase means abstained",
+      "positive correctness requires non-abstention and normalized expected affirmative content",
+      "negative/geometric role is correct only when abstained",
+      "release additionally requires the arm-specific registered tau and release_enabled flag for every release-policy arm; zero_shot remains a record-only raw pass"
+    ],
+    "unparsable": "non-release; never repaired by free-text interpretation"
+  },
+  "statistics": {
+    "analysis_unit": "independent event",
+    "bootstrap": {
+      "clip_cluster_sensitivity": "form connected components of events sharing any manifest source clip; resample components",
+      "cluster_sensitivities_confirmatory": false,
+      "confirmatory_intervals": "two-sided percentile 95% CI for correct-released-yield differences; one-sided percentile 95% upper bounds for both safety-risk differences",
+      "primary": "4,000 event-level paired replicates, percentile 95%, seed 20260805",
+      "site_cluster_sensitivity": "resample the three site clusters with replacement; descriptive because only three sites"
+    },
+    "missingness": "unresolved execution failure, exhausted retry, or unparsable output is non-release",
+    "multiplicity": "H1-to-H2 fixed sequence on the 20260713 exact policy; seed robustness, layer-2, allocation, cost, and remaining arms receive no recycled alpha",
+    "paired_binary": {
+      "interval": "Newcombe paired-proportions method 10, two-sided 95%",
+      "role": "descriptive companion output; not an additional H1 or H2 condition",
+      "table": "event-level n11/n10/n01/n00",
+      "test": "exact two-sided McNemar at alpha=0.05"
+    }
+  },
+  "status": "FROZEN_NOT_EXECUTED",
+  "thresholds": {
+    "artifact_path": "outputs/b1_prereg_20260805/b1_thresholds.json",
+    "artifact_sha256": "4a9f9c9eadaa1a98098f6c13563693a8e3b2c90101305ee1cfad1183b1b680e6",
+    "operative_rule": "W5a dev_max_yield_role_guardrails over all 246 stored DEV rows: maximize P+ correct-released yield subject to E- release <=0.10 and P- release <=0.05; ties choose fewer released errors then higher tau; no non-empty feasible candidate gives tau=1 and release-disabled",
+    "exact_policy_pins": {
+      "answer_abstain_seed_20260713": 0.981128697326919,
+      "explicit_abstention_prompt": 0.9491225851331859
+    },
+    "seed_arm_tau": [
+      {
+        "seed": 20260713,
+        "arm": "answer_abstain",
+        "tau": 0.981128697326919,
+        "fallback_tau_1": false
+      },
+      {
+        "seed": 20260713,
+        "arm": "answer_only",
+        "tau": 0.9999968725353879,
+        "fallback_tau_1": false
+      },
+      {
+        "seed": 20260714,
+        "arm": "answer_abstain",
+        "tau": 0.9722987314076553,
+        "fallback_tau_1": false
+      },
+      {
+        "seed": 20260714,
+        "arm": "answer_only",
+        "tau": 0.9999948179767415,
+        "fallback_tau_1": false
+      },
+      {
+        "seed": 20260715,
+        "arm": "answer_abstain",
+        "tau": 0.9662443411375032,
+        "fallback_tau_1": false
+      },
+      {
+        "seed": 20260715,
+        "arm": "answer_only",
+        "tau": 0.9999959819939936,
+        "fallback_tau_1": false
+      }
+    ],
+    "head_tau_unchanged": {
+      "correctness_selector": 0.9999998807907104,
+      "action_classification_head": 0.9994823932647705
+    },
+    "primary_tau_transport_sensitivity": "apply answer_abstain_seed_20260713 tau=0.981128697326919 without reselection to the stored 246-row DEV responses for seeds 20260714 and 20260715; descriptive, not confirmatory",
+    "primary_exact_reproduction": "PASS: the executed W5a selection code on its 20260713 answer_abstain_sft 246-row DEV source returns exactly 0.981128697326919"
+  },
+  "thresholds_v10_nonoperative_reference": {
+    "status": "NONOPERATIVE historical reference only",
+    "note": "B1 v1.0 used an M3 Clopper-Pearson threshold track. Its numeric outputs were removed from operative registration fields in v1.1 and are not used for B1 execution or analysis."
+  },
+  "version": "1.1"
+}

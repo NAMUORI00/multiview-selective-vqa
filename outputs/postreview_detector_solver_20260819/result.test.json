@@ -1,0 +1,124 @@
+{
+  "schema_version": "postreview_detector_solver_result_v1",
+  "evidence_status": "post_hoc_added_baseline_with_pre_execution_frozen_protocol",
+  "partition": "test",
+  "config": {
+    "track_len_min": 2,
+    "det_score_min": 0.4,
+    "t_move": 0.02,
+    "t_grow": 1.0
+  },
+  "overall": {
+    "cells": {
+      "available-yes": 71.15987460815047,
+      "available-no": 55.79937304075235,
+      "unavailable-yes": 79.3103448275862,
+      "unavailable-no": 79.3103448275862
+    },
+    "macro": 71.39498432601881,
+    "all_four": 38.557993730407524,
+    "events": 319,
+    "confusion": {
+      "abstain->abstain": 506,
+      "abstain->no": 60,
+      "abstain->yes": 72,
+      "no->abstain": 62,
+      "no->no": 178,
+      "no->yes": 79,
+      "yes->abstain": 62,
+      "yes->no": 30,
+      "yes->yes": 227
+    }
+  },
+  "per_template": {
+    "moves_right": {
+      "cells": {
+        "available-yes": 75.0,
+        "available-no": 62.06896551724138,
+        "unavailable-yes": 83.06451612903226,
+        "unavailable-no": 78.16091954022988
+      },
+      "macro": 74.57360029662588,
+      "all_four": 0.0,
+      "events": 211,
+      "confusion": {
+        "abstain->abstain": 171,
+        "abstain->no": 28,
+        "abstain->yes": 12,
+        "no->abstain": 24,
+        "no->no": 54,
+        "no->yes": 9,
+        "yes->abstain": 21,
+        "yes->no": 10,
+        "yes->yes": 93
+      }
+    },
+    "moves_down": {
+      "cells": {
+        "available-yes": 76.19047619047619,
+        "available-no": 75.0,
+        "unavailable-yes": 60.317460317460316,
+        "unavailable-no": 76.5625
+      },
+      "macro": 72.01760912698413,
+      "all_four": 0.0,
+      "events": 127,
+      "confusion": {
+        "abstain->abstain": 87,
+        "abstain->no": 24,
+        "abstain->yes": 16,
+        "no->abstain": 12,
+        "no->no": 48,
+        "no->yes": 4,
+        "yes->abstain": 9,
+        "yes->no": 6,
+        "yes->yes": 48
+      }
+    },
+    "grows_larger": {
+      "cells": {
+        "available-yes": 67.79661016949153,
+        "available-no": 66.10169491525424,
+        "unavailable-yes": 83.05084745762711,
+        "unavailable-no": 89.83050847457628
+      },
+      "macro": 76.69491525423729,
+      "all_four": 0.0,
+      "events": 118,
+      "confusion": {
+        "abstain->abstain": 102,
+        "abstain->no": 5,
+        "abstain->yes": 11,
+        "no->abstain": 11,
+        "no->no": 39,
+        "no->yes": 9,
+        "yes->abstain": 16,
+        "yes->no": 3,
+        "yes->yes": 40
+      }
+    },
+    "multiple_people": {
+      "cells": {
+        "available-yes": 63.013698630136986,
+        "available-no": 33.944954128440365,
+        "unavailable-yes": 86.3013698630137,
+        "unavailable-no": 76.14678899082568
+      },
+      "macro": 64.85170290310418,
+      "all_four": 0.0,
+      "events": 182,
+      "confusion": {
+        "abstain->abstain": 146,
+        "abstain->no": 3,
+        "abstain->yes": 33,
+        "no->abstain": 15,
+        "no->no": 37,
+        "no->yes": 57,
+        "yes->abstain": 16,
+        "yes->no": 11,
+        "yes->yes": 46
+      }
+    }
+  },
+  "seconds_per_panel": 0.48397927897103526
+}

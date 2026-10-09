@@ -1,0 +1,55 @@
+# MV-EviRAG public showcase
+# This repository carries code and small aggregate records only.
+# Never commit datasets, media, model weights, per-sample outputs or secrets.
+
+# --- Data (AI-Hub videos/labels must never be redistributed) ---
+resources/
+data/
+outputs/**/manifests/
+outputs/**/*.jsonl
+outputs/**/*.csv
+
+# --- Media ---
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+
+# --- Model weights / arrays ---
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.gguf
+*.npy
+*.npz
+*.pkl
+*.joblib
+*.onnx
+
+# --- Secrets & environments ---
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+
+# --- Python caches ---
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# --- Editor / assistant state ---
+.claude/
+.idea/
+.vscode/

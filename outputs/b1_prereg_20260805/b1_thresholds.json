@@ -1,0 +1,307 @@
+{
+  "dev_identity": {
+    "events": 82,
+    "rows_per_file": 246,
+    "shared_row_identity_across_all_six_seed_files": true,
+    "w5a_primary_reproduction_row_identity_matches_seed_files": true
+  },
+  "fixed_policy_thresholds": {
+    "action_classification_head": {
+      "release_enabled": true,
+      "rule": "dev_max_yield_role_guardrails",
+      "tau": 0.9994823932647705
+    },
+    "correctness_selector": {
+      "release_enabled": true,
+      "rule": "dev_max_yield_role_guardrails",
+      "tau": 0.9999998807907104
+    },
+    "explicit_abstention_prompt": {
+      "release_enabled": true,
+      "rule": "dev_max_yield_role_guardrails",
+      "selection_metrics": {
+        "eminus_release_rate": 0.024390243902439025,
+        "pminus_release_rate": 0.0,
+        "pplus_correct_released_yield": 0.573170731707317,
+        "released": 59,
+        "released_errors": 12,
+        "threshold": 0.9491225851331859
+      },
+      "tau": 0.9491225851331859
+    }
+  },
+  "nonoperative_reference": {
+    "M3_Clopper_Pearson_track": "distinct policy track; no M3 conformal threshold is operative in B1 v1.1"
+  },
+  "operative_rule": {
+    "authority": "executed W5a release-candidate implementation",
+    "candidate_grid": "W5a disabled sentinel plus unique confidence values among non-abstained rows",
+    "fallback": "if no non-empty candidate satisfies both role guardrails, set tau=1 and release_enabled=false",
+    "guardrails": {
+      "eminus_release_rate_max": 0.1,
+      "pminus_release_rate_max": 0.05
+    },
+    "name": "dev_max_yield_role_guardrails",
+    "objective": "maximize P+ correct-released yield",
+    "population": "all 246 stored DEV confidence rows (82 events x 3 roles)",
+    "tie_rule": "fewer released errors, then higher threshold"
+  },
+  "primary_exact_policy_verification": {
+    "b0_plan_tau": 0.981128697326919,
+    "exact_match": true,
+    "expected_tau": 0.981128697326919,
+    "note": "The W5a selection source reproduces the B0 policy pin. The M3 20260713 DEV file is an application diagnostic, not the threshold selection authority.",
+    "recomputed_tau": 0.981128697326919,
+    "seed": 20260713,
+    "selection_source_path": "outputs/meva_full_20260713/w5a_fair_baselines/responses/answer_abstain_sft.jsonl",
+    "w5a_selection_tau": 0.981128697326919
+  },
+  "primary_tau_transport_to_new_seeds": {
+    "confirmatory_use": false,
+    "definition": "apply the 20260713 exact-policy answer/abstain tau without reselection to each new seed's stored 246-row DEV response",
+    "metrics_by_target_seed": {
+      "20260714": {
+        "coverage": 0.3252032520325203,
+        "eminus_release_rate": 0.036585365853658534,
+        "events": 82,
+        "pminus_release_rate": 0.0,
+        "pplus_correct_released_yield": 0.9390243902439024,
+        "release_enabled": true,
+        "released": 80,
+        "released_errors": 3,
+        "rows": 246,
+        "source_sha256": "8ef67a4a3c533d879126c1568bd9f580b6bdca6738af0519dc2f805008d2557f",
+        "threshold": 0.981128697326919
+      },
+      "20260715": {
+        "coverage": 0.3008130081300813,
+        "eminus_release_rate": 0.024390243902439025,
+        "events": 82,
+        "pminus_release_rate": 0.0,
+        "pplus_correct_released_yield": 0.8780487804878049,
+        "release_enabled": true,
+        "released": 74,
+        "released_errors": 2,
+        "rows": 246,
+        "source_sha256": "aca822ab731bfb5e590c068b823884a04c60b438f818259dc0eb4ad19a2296e7",
+        "threshold": 0.981128697326919
+      }
+    },
+    "target_seeds": [
+      20260714,
+      20260715
+    ]
+  },
+  "schema_version": "meva_b1_seed_thresholds_v1.1",
+  "source_hashes": {
+    "outputs/b1_prereg_pins_20260805/pins.json": "5a096fa93b738227a6d7300632373d72a3897e03eb60d2b23add45da4201da38",
+    "outputs/meva_full_20260713/w4_oneshot_20260714/answers/answer_abstain_sft.plan.json": "6781b1461afcf94b749e0bacf631920c4a54cea534aad1a22c10589b82013bc8",
+    "outputs/meva_full_20260713/w4_oneshot_20260714/answers/explicit_abstention_prompt.plan.json": "06c3b1da26c57d622396a538b365c64d1d07b252f20ecad7042f8fab95ae11e9",
+    "outputs/meva_full_20260713/w5a_fair_baselines/responses/answer_abstain_sft.jsonl": "05c733fe827776b753f7fb2a4a4b371e26fbf7c07d0d7e2512c3f2d519a8bf2c",
+    "outputs/meva_full_20260713/w5a_fair_baselines/w5a_dev_selection.json": "afd607ecc221fa00fe28b7610039bed9a19ca46a89c69031c6405c5e444dfc1f",
+    "outputs/meva_full_20260713_m3/evaluation/answer_only_sft.jsonl": "153ac9a9c3d85f6b859626bba3ae03502f48553d95edf09cda2f5094c2d2463b",
+    "outputs/meva_full_20260713_m3/evaluation/standard_alignment.jsonl": "cb1deaca7401de3754c26e34e0444197bc571e9523ad6330de2b5992080521db",
+    "outputs/meva_seed_sensitivity_20260728/runs/seed_20260714/evaluation/answer_only_sft.jsonl": "a841480002821c3251221c46062e4cb75909bb8608ecc330b19108d753fc2c77",
+    "outputs/meva_seed_sensitivity_20260728/runs/seed_20260714/evaluation/standard_alignment.jsonl": "8ef67a4a3c533d879126c1568bd9f580b6bdca6738af0519dc2f805008d2557f",
+    "outputs/meva_seed_sensitivity_20260728/runs/seed_20260715/evaluation/answer_only_sft.jsonl": "b360bbd3a7745d25304f6cb8e75e1f6553785378cb2102ed23446901da1ec09a",
+    "outputs/meva_seed_sensitivity_20260728/runs/seed_20260715/evaluation/standard_alignment.jsonl": "aca822ab731bfb5e590c068b823884a04c60b438f818259dc0eb4ad19a2296e7",
+    "scripts/operator/w5a_fair_baselines_runner.py": "cef9c065dee2f7f36369ae4458af4f817b15652fb32fcdaf4e030971132c8279"
+  },
+  "status": "cpu_only_stored_dev_confidence_no_inference",
+  "thresholds": {
+    "20260713": {
+      "answer_abstain": {
+        "application_dev_metrics": {
+          "coverage": 0.3048780487804878,
+          "eminus_release_rate": 0.012195121951219513,
+          "events": 82,
+          "pminus_release_rate": 0.0,
+          "pplus_correct_released_yield": 0.9024390243902439,
+          "release_enabled": true,
+          "released": 75,
+          "released_errors": 1,
+          "rows": 246,
+          "threshold": 0.981128697326919
+        },
+        "application_source_path": "outputs/meva_full_20260713_m3/evaluation/standard_alignment.jsonl",
+        "application_source_sha256": "cb1deaca7401de3754c26e34e0444197bc571e9523ad6330de2b5992080521db",
+        "candidate_grid": {
+          "count": 79,
+          "definition": "W5a disabled sentinel plus unique confidence values among non-abstained rows, descending",
+          "maximum": 1.000000000001,
+          "minimum": 0.981128697326919,
+          "nonempty_guardrail_feasible_count": 78
+        },
+        "fallback_tau_1": false,
+        "policy_status": "B0 exact-policy pin",
+        "release_enabled": true,
+        "rule": "dev_max_yield_role_guardrails",
+        "selection_metrics": {
+          "coverage": 0.3170731707317073,
+          "eminus_release_rate": 0.012195121951219513,
+          "events": 82,
+          "pminus_release_rate": 0.0,
+          "pplus_correct_released_yield": 0.9390243902439024,
+          "release_enabled": true,
+          "released": 78,
+          "released_errors": 1,
+          "rows": 246,
+          "threshold": 0.981128697326919
+        },
+        "selection_source_path": "outputs/meva_full_20260713/w5a_fair_baselines/responses/answer_abstain_sft.jsonl",
+        "selection_source_sha256": "05c733fe827776b753f7fb2a4a4b371e26fbf7c07d0d7e2512c3f2d519a8bf2c",
+        "source_arm": "standard_alignment",
+        "tau": 0.981128697326919
+      },
+      "answer_only": {
+        "candidate_grid": {
+          "count": 224,
+          "definition": "W5a disabled sentinel plus unique confidence values among non-abstained rows, descending",
+          "maximum": 1.000000000001,
+          "minimum": 0.9977501819440863,
+          "nonempty_guardrail_feasible_count": 18
+        },
+        "fallback_tau_1": false,
+        "policy_status": "seed-specific robustness threshold",
+        "release_enabled": true,
+        "rule": "dev_max_yield_role_guardrails",
+        "selection_metrics": {
+          "coverage": 0.06504065040650407,
+          "eminus_release_rate": 0.036585365853658534,
+          "events": 82,
+          "pminus_release_rate": 0.012195121951219513,
+          "pplus_correct_released_yield": 0.14634146341463414,
+          "release_enabled": true,
+          "released": 16,
+          "released_errors": 4,
+          "rows": 246,
+          "threshold": 0.9999968725353879
+        },
+        "selection_source_path": "outputs/meva_full_20260713_m3/evaluation/answer_only_sft.jsonl",
+        "selection_source_sha256": "153ac9a9c3d85f6b859626bba3ae03502f48553d95edf09cda2f5094c2d2463b",
+        "source_arm": "answer_only_sft",
+        "tau": 0.9999968725353879
+      }
+    },
+    "20260714": {
+      "answer_abstain": {
+        "candidate_grid": {
+          "count": 82,
+          "definition": "W5a disabled sentinel plus unique confidence values among non-abstained rows, descending",
+          "maximum": 1.000000000001,
+          "minimum": 0.9722987314076553,
+          "nonempty_guardrail_feasible_count": 81
+        },
+        "fallback_tau_1": false,
+        "policy_status": "seed-specific robustness threshold",
+        "release_enabled": true,
+        "rule": "dev_max_yield_role_guardrails",
+        "selection_metrics": {
+          "coverage": 0.32926829268292684,
+          "eminus_release_rate": 0.036585365853658534,
+          "events": 82,
+          "pminus_release_rate": 0.0,
+          "pplus_correct_released_yield": 0.9512195121951219,
+          "release_enabled": true,
+          "released": 81,
+          "released_errors": 3,
+          "rows": 246,
+          "threshold": 0.9722987314076553
+        },
+        "selection_source_path": "outputs/meva_seed_sensitivity_20260728/runs/seed_20260714/evaluation/standard_alignment.jsonl",
+        "selection_source_sha256": "8ef67a4a3c533d879126c1568bd9f580b6bdca6738af0519dc2f805008d2557f",
+        "source_arm": "standard_alignment",
+        "tau": 0.9722987314076553
+      },
+      "answer_only": {
+        "candidate_grid": {
+          "count": 221,
+          "definition": "W5a disabled sentinel plus unique confidence values among non-abstained rows, descending",
+          "maximum": 1.000000000001,
+          "minimum": 0.9982288148670685,
+          "nonempty_guardrail_feasible_count": 12
+        },
+        "fallback_tau_1": false,
+        "policy_status": "seed-specific robustness threshold",
+        "release_enabled": true,
+        "rule": "dev_max_yield_role_guardrails",
+        "selection_metrics": {
+          "coverage": 0.052845528455284556,
+          "eminus_release_rate": 0.012195121951219513,
+          "events": 82,
+          "pminus_release_rate": 0.036585365853658534,
+          "pplus_correct_released_yield": 0.10975609756097561,
+          "release_enabled": true,
+          "released": 13,
+          "released_errors": 4,
+          "rows": 246,
+          "threshold": 0.9999948179767415
+        },
+        "selection_source_path": "outputs/meva_seed_sensitivity_20260728/runs/seed_20260714/evaluation/answer_only_sft.jsonl",
+        "selection_source_sha256": "a841480002821c3251221c46062e4cb75909bb8608ecc330b19108d753fc2c77",
+        "source_arm": "answer_only_sft",
+        "tau": 0.9999948179767415
+      }
+    },
+    "20260715": {
+      "answer_abstain": {
+        "candidate_grid": {
+          "count": 79,
+          "definition": "W5a disabled sentinel plus unique confidence values among non-abstained rows, descending",
+          "maximum": 1.000000000001,
+          "minimum": 0.9662443411375032,
+          "nonempty_guardrail_feasible_count": 78
+        },
+        "fallback_tau_1": false,
+        "policy_status": "seed-specific robustness threshold",
+        "release_enabled": true,
+        "rule": "dev_max_yield_role_guardrails",
+        "selection_metrics": {
+          "coverage": 0.3170731707317073,
+          "eminus_release_rate": 0.036585365853658534,
+          "events": 82,
+          "pminus_release_rate": 0.0,
+          "pplus_correct_released_yield": 0.9146341463414634,
+          "release_enabled": true,
+          "released": 78,
+          "released_errors": 3,
+          "rows": 246,
+          "threshold": 0.9662443411375032
+        },
+        "selection_source_path": "outputs/meva_seed_sensitivity_20260728/runs/seed_20260715/evaluation/standard_alignment.jsonl",
+        "selection_source_sha256": "aca822ab731bfb5e590c068b823884a04c60b438f818259dc0eb4ad19a2296e7",
+        "source_arm": "standard_alignment",
+        "tau": 0.9662443411375032
+      },
+      "answer_only": {
+        "candidate_grid": {
+          "count": 217,
+          "definition": "W5a disabled sentinel plus unique confidence values among non-abstained rows, descending",
+          "maximum": 1.000000000001,
+          "minimum": 0.9986176709622832,
+          "nonempty_guardrail_feasible_count": 19
+        },
+        "fallback_tau_1": false,
+        "policy_status": "seed-specific robustness threshold",
+        "release_enabled": true,
+        "rule": "dev_max_yield_role_guardrails",
+        "selection_metrics": {
+          "coverage": 0.07317073170731707,
+          "eminus_release_rate": 0.06097560975609756,
+          "events": 82,
+          "pminus_release_rate": 0.036585365853658534,
+          "pplus_correct_released_yield": 0.12195121951219512,
+          "release_enabled": true,
+          "released": 18,
+          "released_errors": 8,
+          "rows": 246,
+          "threshold": 0.9999959819939936
+        },
+        "selection_source_path": "outputs/meva_seed_sensitivity_20260728/runs/seed_20260715/evaluation/answer_only_sft.jsonl",
+        "selection_source_sha256": "b360bbd3a7745d25304f6cb8e75e1f6553785378cb2102ed23446901da1ec09a",
+        "source_arm": "answer_only_sft",
+        "tau": 0.9999959819939936
+      }
+    }
+  }
+}

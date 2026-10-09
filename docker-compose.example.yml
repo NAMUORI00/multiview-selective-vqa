@@ -1,0 +1,28 @@
+services:
+  mvevirag:
+    build: .
+    runtime: nvidia
+    environment:
+      - PYTHONPATH=/workspace/src
+      - HF_HOME=/cache/huggingface
+      - TRANSFORMERS_CACHE=/cache/huggingface
+      - TMPDIR=/tmp/mv-evirag
+      - MVEVIRAG_DISABLE_CUDNN=1
+    volumes:
+      - ./src:/workspace/src
+      - ./resources:/data/resources:ro
+      - ./outputs:/outputs
+      - hf_cache:/cache/huggingface
+      - tmp_data:/tmp/mv-evirag
+    shm_size: 32g
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    command: >-
+      bash -c "echo 'Container ready. Run: docker compose exec mvevirag python -m mvevirag.pipeline.run'"
+
+volumes:
+  hf_cache:
+  tmp_data:

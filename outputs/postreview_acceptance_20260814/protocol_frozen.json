@@ -1,0 +1,126 @@
+{
+  "schema_version": "postreview_2x2_protocol_frozen_v1",
+  "frozen_on": "2026-08-18",
+  "supersedes": "protocol_draft.json",
+  "status": "FROZEN_BEFORE_PROSPECTIVE_TEST_OPENING",
+  "prospective_test_opened_at_freeze_time": false,
+
+  "why_this_amends_the_draft": [
+    "The draft named no decision rule, so the campaign was measurement-ready but not decision-ready.",
+    "The development pilot showed the explicit-abstention prompt emitting invalid schema on 290 of 328 dev rows, which makes it a weak primary comparator for this output contract.",
+    "The primary comparison therefore moves to the matched-supervision control, which is also the article's actual mechanism claim."
+  ],
+
+  "amendment_2026_08_18": {
+    "recorded_before_the_prospective_test_was_opened": true,
+    "prospective_test_state_at_amendment": "closed; the first test attempt stopped at the checkpoint gate and opened nothing",
+    "what_changed": "retraining under the identical recipe is now permitted, replacing the reuse-only requirement",
+    "why": [
+      "The pilot staged its adapters in server tmpfs and the pilot's cleanup receipt deleted them; no local copy was retained, so the required checkpoints no longer exist.",
+      "The instruction that caused this was the pilot brief's unqualified cleanup requirement, which did not exempt the adapters.",
+      "The registration's purpose is that checkpoints must not be chosen using test information. Retraining now preserves that purpose, because the test partition is still closed."
+    ],
+    "conditions": [
+      "identical base model, seed 20260814, data, hyperparameters and the same three-epoch selection by development loss",
+      "training completes before the prospective test is materialized or opened",
+      "the retrained checkpoint tree hashes are compared against the pilot's retained hashes and the comparison is reported either way",
+      "if the selected epoch differs from the pilot's, that is reported rather than reconciled",
+      "the adapters are retained locally this time so the situation cannot recur"
+    ],
+    "pilot_reference_hashes": {
+      "paired_sft": {"selected_epoch": 3, "checkpoint_tree_sha256": "d6bf820def179644c247e30a250d9fb27fdf12ecec1581411180f119e83191af"},
+      "answer_only_sft": {"selected_epoch": 2, "checkpoint_tree_sha256": "a0ce641197a04b8c9d9c6d21c067b505c36b526952d4b100e414aa4e63bf7080"}
+    },
+    "unchanged": [
+      "the primary and gatekept hypotheses and their criteria",
+      "the pre-test gates",
+      "the analysis rules",
+      "the manuscript placement contract for both outcomes"
+    ]
+  },
+
+  "models": {
+    "reuse_pilot_checkpoints_without_retraining": "superseded by amendment_2026_08_18",
+    "reason": "epochs were selected by development loss before the test exists, so reusing them keeps the test held out",
+    "base_model": "Qwen/Qwen3-VL-8B-Instruct",
+    "seed": 20260814,
+    "arms_primary": ["paired_sft", "answer_only_sft"],
+    "arms_diagnostic": ["explicit_prompt"]
+  },
+
+  "adjudication": {
+    "strict_enum": ["yes", "no", "abstain"],
+    "exact_match_only": true,
+    "substring_or_affirmative_token_fallback": false,
+    "invalid_schema_counts_as_incorrect": true
+  },
+
+  "primary_hypothesis_HN1": {
+    "comparison": "paired_sft minus answer_only_sft",
+    "metric": "four-cell macro exact accuracy",
+    "criterion": "event-cluster bootstrap 95% CI lower bound greater than 0 AND exact McNemar two-sided p below 0.05",
+    "bootstrap_replicates": 4000,
+    "bootstrap_seed": 20260805,
+    "cluster": "event_id"
+  },
+
+  "gatekept_hypothesis_HN2": {
+    "tested_only_if": "HN1 passes",
+    "claim": "polarity discrimination exceeds what question priors alone can reach",
+    "metric": "paired_sft exact accuracy on the available-No cell",
+    "criterion": "point estimate above 0.60, the construct's own question-only shortcut ceiling",
+    "note": "sequential gatekeeping controls the family of two; no further multiplicity adjustment"
+  },
+
+  "reported_without_criteria": [
+    "per-cell exact accuracy and the yes/no/abstain confusion for every arm",
+    "all-four-rows-correct event rate",
+    "constant-yes baseline on the four cells",
+    "geometry threshold upper bound on the four cells",
+    "low-level nuisance audit and question-only audit on the test partition",
+    "explicit_prompt arm including its schema-invalid count"
+  ],
+
+  "pre_test_gates": {
+    "minimum_test_events": 300,
+    "question_only_majority_accuracy_max": 0.60,
+    "low_level_nuisance_auroc_max": 0.60,
+    "on_failure": "stop and report; do not proceed to inference"
+  },
+
+  "analysis_rules": {
+    "single_pass_no_rerun_on_observed_results": true,
+    "no_threshold_fitted_on_test": true,
+    "no_release_gate_on_the_primary_metric": true,
+    "pre_gate_exact_accuracy_is_the_primary_surface": true,
+    "checkpoint_reselection_after_seeing_test": "prohibited"
+  },
+
+  "evidence_status_and_scope": {
+    "label": "prospective_structured_evaluation_on_ai_hub",
+    "does_not_replace_or_relabel": "the two sealed MEVA-KF1 cohorts",
+    "geometry_immunity_by_construction": "unavailable cells are wrong-region crops fully inside the frame, so in-image fraction cannot separate them",
+    "constant_answer_immunity_by_construction": "available Yes and available No share event, media and question",
+    "human_semantic_sufficiency": "not_claimed",
+    "deployment_claim": false
+  },
+
+  "manuscript_placement_contract": {
+    "frozen_before_results_are_seen": true,
+    "if_HN1_passes": {
+      "setup": "one new subsection in the experimental setup describing the polarity-balanced prospective evaluation, its construction and its two immunity checks",
+      "results": "one new table reporting the four cells for the primary arms, the two trivial baselines, and the prompt arm as a diagnostic row",
+      "claims": "Stage 2 may state that answer-abstention supervision improves polarity-balanced selective response on a surface where neither a constant answer nor crop geometry succeeds",
+      "exhibit_budget": "pair the new table with one demotion; candidates in priority order are Table 2 notation, then Table 1 related-work compression"
+    },
+    "if_HN1_fails": {
+      "results": "report the registered null once, in the results section, in its strongest true form",
+      "claims": "Stage 2 narrows to the surviving comparison, that supervision reduces over-refusal of evidence-bearing inputs relative to prompting, and the polarity claim is withdrawn",
+      "no_reframing": "the failure is not moved to an appendix, a footnote or a diagnostic label"
+    },
+    "either_way": [
+      "the MEVA trivial-baseline results are reported regardless of this outcome",
+      "the title is not changed on the basis of this result without a separate decision"
+    ]
+  }
+}
