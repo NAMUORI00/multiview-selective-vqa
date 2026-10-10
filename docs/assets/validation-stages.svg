@@ -1,0 +1,64 @@
+<svg width="1280" height="420" viewBox="0 0 1280 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI-Hub 다각도 CCTV에서 개발 실증, 준확증, LoRA 학습, 사전 고정 재평가를 거친 뒤, MEVA-KF1에서 교차 데이터셋 재현, 봉인 평가 1, 확증 평가인 봉인 평가 2를 수행하고, AI-Hub 전향 평가로 보강했다">
+<title>검증 단계</title>
+<rect x="40.0" y="40.0" width="700.0" height="170.0" rx="18" fill="none" stroke="#7d8590" stroke-opacity="0.6" stroke-width="1.6"/>
+<rect x="60.0" y="28.0" width="170.1" height="24" rx="12" fill="#7d8590" fill-opacity="0.12" stroke="#7d8590" stroke-opacity="0.6" stroke-width="1.2"/>
+<text x="145.1" y="41.0" fill="#7d8590" font-size="15" font-weight="700" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">AI-Hub 다각도 CCTV</text>
+<rect x="40.0" y="250.0" width="1200.0" height="150.0" rx="18" fill="none" stroke="#2f81f7" stroke-opacity="0.8" stroke-width="1.6"/>
+<rect x="60.0" y="238.0" width="181.7" height="24" rx="12" fill="#2f81f7" fill-opacity="0.12" stroke="#2f81f7" stroke-opacity="0.8" stroke-width="1.2"/>
+<text x="150.8" y="251.0" fill="#2f81f7" font-size="15" font-weight="700" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">MEVA-KF1 공개 데이터</text>
+<rect x="64.0" y="74.0" width="150.0" height="72.0" rx="14" fill="none" stroke="#7d8590" stroke-opacity="0.6" stroke-width="1.6"/>
+<text x="139.0" y="99.0" fill="#7d8590" font-size="16" font-weight="700" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">개발 실증</text>
+<text x="139.0" y="124.0" fill="#7d8590" font-size="14" font-weight="500" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">599 사건</text>
+<rect x="114.0" y="162.0" width="50.0" height="28.0" rx="14.0" fill="none" stroke="#7d8590" stroke-opacity="0.7" stroke-width="1.2"/>
+<text x="139.0" y="177.0" fill="#7d8590" font-size="12" font-weight="600" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">개발</text>
+<path d="M214.0,110.0 L230.0,110.0" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M222.1,114.2 L230.0,110.0 L222.1,105.8" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="230.0" y="74.0" width="150.0" height="72.0" rx="14" fill="none" stroke="#7d8590" stroke-opacity="0.6" stroke-width="1.6"/>
+<text x="305.0" y="99.0" fill="#7d8590" font-size="16" font-weight="700" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">준확증</text>
+<text x="305.0" y="124.0" fill="#7d8590" font-size="14" font-weight="500" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">방향 확인</text>
+<rect x="280.0" y="162.0" width="50.0" height="28.0" rx="14.0" fill="none" stroke="#7d8590" stroke-opacity="0.7" stroke-width="1.2"/>
+<text x="305.0" y="177.0" fill="#7d8590" font-size="12" font-weight="600" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">진단</text>
+<path d="M380.0,110.0 L396.0,110.0" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M388.1,114.2 L396.0,110.0 L388.1,105.8" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="396.0" y="74.0" width="150.0" height="72.0" rx="14" fill="none" stroke="#7d8590" stroke-opacity="0.6" stroke-width="1.6"/>
+<text x="471.0" y="99.0" fill="#7d8590" font-size="16" font-weight="700" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">LoRA 학습</text>
+<text x="471.0" y="124.0" fill="#7d8590" font-size="14" font-weight="500" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">답변-보류 정렬</text>
+<rect x="446.0" y="162.0" width="50.0" height="28.0" rx="14.0" fill="none" stroke="#7d8590" stroke-opacity="0.7" stroke-width="1.2"/>
+<text x="471.0" y="177.0" fill="#7d8590" font-size="12" font-weight="600" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">학습</text>
+<path d="M546.0,110.0 L562.0,110.0" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M554.1,114.2 L562.0,110.0 L554.1,105.8" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="562.0" y="74.0" width="150.0" height="72.0" rx="14" fill="none" stroke="#7d8590" stroke-opacity="0.6" stroke-width="1.6"/>
+<text x="637.0" y="99.0" fill="#7d8590" font-size="16" font-weight="700" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">사전 고정 재평가</text>
+<text x="637.0" y="124.0" fill="#7d8590" font-size="14" font-weight="500" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">798 사건</text>
+<rect x="612.0" y="162.0" width="50.0" height="28.0" rx="14.0" fill="none" stroke="#7d8590" stroke-opacity="0.7" stroke-width="1.2"/>
+<text x="637.0" y="177.0" fill="#7d8590" font-size="12" font-weight="600" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">진단</text>
+<rect x="800.0" y="74.0" width="300.0" height="72.0" rx="14" fill="none" stroke="#7d8590" stroke-opacity="0.6" stroke-width="1.6"/>
+<g transform="translate(816.0,98.0) scale(1.000)" stroke="#7d8590" stroke-width="1.90" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M12,2 a10,10 0 1 0 0.01,0 z M7,12 l3.5,3.5 L17,9"/></g>
+<text x="970.0" y="99.0" fill="#7d8590" font-size="17" font-weight="700" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">전향 평가</text>
+<text x="970.0" y="124.0" fill="#7d8590" font-size="15" font-weight="500" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">AI-Hub 319 사건 · 극성 균형</text>
+<rect x="925.0" y="162.0" width="50.0" height="28.0" rx="14.0" fill="none" stroke="#7d8590" stroke-opacity="0.7" stroke-width="1.2"/>
+<text x="950.0" y="177.0" fill="#7d8590" font-size="12" font-weight="600" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">보강</text>
+<rect x="120.0" y="284.0" width="300.0" height="72.0" rx="14" fill="none" stroke="#7d8590" stroke-opacity="0.6" stroke-width="1.6"/>
+<text x="270.0" y="309.0" fill="#7d8590" font-size="17" font-weight="700" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">교차 데이터셋 재현</text>
+<text x="270.0" y="334.0" fill="#7d8590" font-size="15" font-weight="500" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">136 사건</text>
+<rect x="245.0" y="364.0" width="50.0" height="28.0" rx="14.0" fill="none" stroke="#7d8590" stroke-opacity="0.7" stroke-width="1.2"/>
+<text x="270.0" y="379.0" fill="#7d8590" font-size="12" font-weight="600" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">재현</text>
+<path d="M420.0,320.0 L474.0,320.0" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M466.1,324.2 L474.0,320.0 L466.1,315.8" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="480.0" y="284.0" width="300.0" height="72.0" rx="14" fill="none" stroke="#7d8590" stroke-opacity="0.6" stroke-width="1.6"/>
+<text x="630.0" y="309.0" fill="#7d8590" font-size="17" font-weight="700" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">봉인 평가 1</text>
+<text x="630.0" y="334.0" fill="#7d8590" font-size="15" font-weight="500" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">260 사건</text>
+<rect x="605.0" y="364.0" width="50.0" height="28.0" rx="14.0" fill="none" stroke="#7d8590" stroke-opacity="0.7" stroke-width="1.2"/>
+<text x="630.0" y="379.0" fill="#7d8590" font-size="12" font-weight="600" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">확증</text>
+<path d="M780.0,320.0 L834.0,320.0" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M826.1,324.2 L834.0,320.0 L826.1,315.8" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="840.0" y="284.0" width="300.0" height="72.0" rx="14" fill="none" stroke="#2f81f7" stroke-opacity="0.9" stroke-width="1.8"/>
+<text x="990.0" y="309.0" fill="#2f81f7" font-size="17" font-weight="700" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">봉인 평가 2</text>
+<text x="990.0" y="334.0" fill="#7d8590" font-size="15" font-weight="500" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">260 사건 · 클립 분리</text>
+<rect x="957.2" y="364.0" width="65.6" height="28.0" rx="14.0" fill="none" stroke="#2f81f7" stroke-opacity="0.7" stroke-width="1.2"/>
+<text x="990.0" y="379.0" fill="#2f81f7" font-size="12" font-weight="600" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif">주 근거</text>
+<path d="M697.0,146.0 L697.0,230.0 L270.0,230.0 L270.0,278.0" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M265.8,270.1 L270.0,278.0 L274.2,270.1" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1020.0,320.0 L1180.0,320.0 L1180.0,110.0 L1106.0,110.0" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1113.9,105.8 L1106.0,110.0 L1113.9,114.2" stroke="#7d8590" stroke-opacity="0.9" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
